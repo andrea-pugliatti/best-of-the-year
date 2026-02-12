@@ -10,19 +10,19 @@ Nel progetto aggiungere un controller che risponde alla root dell’applicazione
 
 ## Step 2
 
-Creare all’interno del controller due metodi privati :
+Creare all’interno del controller due metodi privati:
 
 - uno restituisce una lista di oggetti di tipo **Movie** - **getBestMovies()**
 - l’altro restituisce una lista di oggetti di tipo **Song** - **getBestSongs()** 
 
 
-Creare le classi **Movie** e **Song** aventi almeno :
+Creare le classi **Movie** e **Song** aventi almeno:
 
 - un id
 - un titolo
 
 
-Aggiungere al controller altri due metodi, che rispondono agli url
+Aggiungere al controller altri due metodi, che rispondono agli url:
 
 - “/movies”
 - “/songs”
