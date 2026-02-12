@@ -2,7 +2,7 @@
 
 Questo esercizio è diviso in vari step, che vanno seguiti in maniera incrementale, essendo propedeutici.
 
-## Step 1
+## Step 1
 
 Creare un nuovo progetto Spring Boot MVC + Thymeleaf (puoi trovare il processo sia nella lezione che nelle slide). Il nome del progetto è best-of-the-year (stesso nome della repository).
 
