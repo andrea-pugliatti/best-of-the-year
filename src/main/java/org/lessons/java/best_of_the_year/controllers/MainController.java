@@ -20,6 +20,18 @@ public class MainController {
         return "index";
     }
 
+    @GetMapping("/movies")
+    public String getMovies(Model model) {
+        model.addAttribute("movies", getBestMovies());
+        return "movies";
+    }
+
+    @GetMapping("/songs")
+    public String getSongs(Model model) {
+        model.addAttribute("songs", getBestSongs());
+        return "songs";
+    }
+
     private ArrayList<Movie> getBestMovies() {
         return new ArrayList<>(
                 List.of(new Movie(123, "Movie 1"), new Movie(1233, "Movie 2"), new Movie(1234, "Movie 3")));
