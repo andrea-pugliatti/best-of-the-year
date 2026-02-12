@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 @RequestMapping("/")
@@ -26,15 +27,44 @@ public class MainController {
         return "movies";
     }
 
+    @GetMapping("/movies/{id}")
+    public String getMovieById(@PathVariable("id") String movieId, Model model) {
+        Movie movie = null;
+
+        for (Movie m : getBestMovies()) {
+            if (m.getId() == Integer.parseInt(movieId)) {
+                movie = m;
+            }
+        }
+
+        model.addAttribute("movie", movie);
+        return "movie_detail";
+    }
+
     @GetMapping("/songs")
     public String getSongs(Model model) {
         model.addAttribute("songs", getBestSongs());
         return "songs";
     }
 
+    @GetMapping("/songs/{id}")
+    public String getSongById(@PathVariable("id") String songId, Model model) {
+        Song song = null;
+
+        for (Song s : getBestSongs()) {
+            if (s.getId() == Integer.parseInt(songId)) {
+                song = s;
+            }
+        }
+
+        model.addAttribute("song", song);
+        return "song_detail";
+    }
+
     private ArrayList<Movie> getBestMovies() {
         return new ArrayList<>(
-                List.of(new Movie(123, "Movie 1"), new Movie(1233, "Movie 2"), new Movie(1234, "Movie 3")));
+                List.of(new Movie(123, "La Vita è bella"), new Movie(1233, "Il Gigante di Ferro"),
+                        new Movie(1234, "Pirati dei Caraibi")));
     }
 
     private ArrayList<Song> getBestSongs() {
