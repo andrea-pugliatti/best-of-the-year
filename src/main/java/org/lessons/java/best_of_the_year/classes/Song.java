@@ -1,0 +1,28 @@
+package org.lessons.java.best_of_the_year.classes;
+
+import java.security.InvalidParameterException;
+
+public class Song {
+    private int id;
+    private String title;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        if (title == null) {
+            throw new InvalidParameterException();
+        }
+        this.title = title;
+    }
+
+}
