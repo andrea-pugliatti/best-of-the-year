@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Movies</title>
 </head>
 
 <body>
-    <h1 th:text="'Best of the year by ' + ${movies}" />
+    <h1 th:text="'Best Movies'" />
+    <ul>
+        <li th:each="movie: ${movies}" th:id="${movie.id}" th:text="${movie.title}" />
+    </ul>
 </body>
 
 </html>
