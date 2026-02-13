@@ -37,8 +37,8 @@ public class MainController {
             }
         }
 
-        model.addAttribute("movie", movie);
-        return "movie_detail";
+        model.addAttribute("item", movie);
+        return "detail";
     }
 
     @GetMapping("/songs")
@@ -57,8 +57,8 @@ public class MainController {
             }
         }
 
-        model.addAttribute("song", song);
-        return "song_detail";
+        model.addAttribute("item", song);
+        return "detail";
     }
 
     private ArrayList<Movie> getBestMovies() {
