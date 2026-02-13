@@ -5,8 +5,48 @@
 
 <body>
     <div th:replace="~{fragments/header :: header()}" />
+    <main class="container">
+        <div class="d-flex flex-column justify-content-center my-5">
 
-    <h1 th:text="'Best of the year by ' + ${name}" />
+            <h1 class="text-center" th:text="'Best of the year by ' + ${name}" />
+
+            <div class="align-self-center my-2">
+                <img class="rounded-4" height="500" th:src="@{/img/photo.jpeg}" alt="Photo of a guy">
+            </div>
+
+            <p class="p-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium molestias aliquid odio,
+                delectus totam dolor fugiat fuga ad modi quibusdam, deserunt sunt commodi distinctio doloribus non
+                reiciendis doloremque quo eligendi.
+                At dolorum nulla nisi dolore eligendi in non pariatur culpa sed earum. Odio similique neque architecto
+                ullam nemo modi quisquam placeat vel. Aliquid distinctio, dolores temporibus quisquam nisi veritatis
+                fugiat.
+                Sit eos asperiores rem? Sequi soluta, error sapiente iste saepe eveniet quibusdam iusto molestias,
+                blanditiis labore vitae facilis cumque corrupti iure! Quos tenetur rerum reprehenderit! Atque autem ipsa
+                soluta adipisci?
+                Perferendis, corporis ea praesentium assumenda nisi, nostrum ut facilis vel et quisquam quia aspernatur
+                labore nemo itaque magni. Ipsam modi exercitationem dolore dolorem suscipit omnis ab animi accusantium
+                ut ullam.
+                Facere maiores eligendi autem! Consectetur illum, placeat voluptate itaque sequi harum rerum, in et
+                ipsam voluptatum enim mollitia non ut numquam obcaecati accusantium pariatur. Distinctio fugiat autem
+                asperiores in culpa.
+                Facilis aspernatur sint sunt impedit quos est reiciendis exercitationem, laborum cum eligendi! Dolorum
+                quo eveniet pariatur repudiandae, autem tempore sunt vero doloribus repellendus facere ratione est
+                architecto porro officia! Modi!
+                Earum, neque. Id, et temporibus, tempora exercitationem deserunt, adipisci quod laudantium autem
+                voluptatibus officia voluptates non perferendis eveniet. Est quas ratione earum veritatis a iste facilis
+                culpa sit porro debitis.
+                Dolorum quos earum explicabo at, natus in voluptatem excepturi tempora tenetur, iure rem. Sint
+                reiciendis doloremque enim, incidunt perspiciatis dolores praesentium minima, animi voluptates esse
+                labore ea accusamus autem tempora?
+                Nobis sint harum eligendi quis dolorem, sapiente error non, officiis libero unde quidem, voluptates quod
+                dolor autem. Magnam eaque fugiat minus quam dolorum. Deserunt, unde dicta inventore aperiam odit vitae?
+                Eos labore in ex tempore cum itaque est. Blanditiis reprehenderit atque architecto, facilis
+                exercitationem quos similique quas eligendi perferendis facere quo, voluptatibus, repudiandae qui
+                maiores culpa id dolorum. Cupiditate, dicta.</p>
+
+        </div>
+
+    </main>
 
     <div th:replace="~{fragments/fragments :: bootstrap()}" />
 </body>
