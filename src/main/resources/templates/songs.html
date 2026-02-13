@@ -7,11 +7,17 @@
     <div th:replace="~{fragments/header :: header()}" />
     <main class="container">
         <div class="d-flex flex-column justify-content-center my-5">
+
             <h1 class="text-center" th:text="'Best Songs'" />
 
             <ul class="align-self-center my-2">
-                <li th:each="song: ${songs}" th:id="${song.id}" th:text="${song.title}" />
+
+                <li th:each="song: ${songs}" th:id="${song.id}">
+                    <a th:href="'/songs/' + ${song.id}" th:text="${song.title}" />
+                </li>
+
             </ul>
+
         </div>
     </main>
 
