@@ -8,6 +8,8 @@
 
     <h1 th:text="${item.title}" />
     <p th:text="'ID: ' + ${item.id}" />
+
+    <div th:replace="~{fragments/fragments :: bootstrap()}" />
 </body>
 
 </html>

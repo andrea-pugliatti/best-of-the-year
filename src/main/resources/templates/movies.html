@@ -12,6 +12,7 @@
         <li th:each="movie: ${movies}" th:id="${movie.id}" th:text="${movie.title}" />
     </ul>
 
+    <div th:replace="~{fragments/fragments :: bootstrap()}" />
 </body>
 
 </html>

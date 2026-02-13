@@ -11,6 +11,8 @@
     <ul>
         <li th:each="song: ${songs}" th:id="${song.id}" th:text="${song.title}" />
     </ul>
+
+    <div th:replace="~{fragments/fragments :: bootstrap()}" />
 </body>
 
 </html>
