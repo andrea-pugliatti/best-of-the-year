@@ -4,6 +4,8 @@
 <head th:replace="~{fragments/fragments :: head('Home')}" />
 
 <body>
+    <div th:replace="~{fragments/header :: header()}" />
+
     <h1 th:text="'Best of the year by ' + ${name}" />
 </body>
 

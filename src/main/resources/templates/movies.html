@@ -4,7 +4,10 @@
 <head th:replace="~{fragments/fragments :: head('Best Movies')}" />
 
 <body>
+    <div th:replace="~{fragments/header :: header()}" />
+
     <h1 th:text="'Best Movies'" />
+
     <ul>
         <li th:each="movie: ${movies}" th:id="${movie.id}" th:text="${movie.title}" />
     </ul>

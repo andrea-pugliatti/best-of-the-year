@@ -4,6 +4,8 @@
 <head th:replace="~{fragments/fragments :: head(${item.title})}" />
 
 <body>
+    <div th:replace="~{fragments/header :: header()}" />
+
     <h1 th:text="${item.title}" />
     <p th:text="'ID: ' + ${item.id}" />
 </body>
